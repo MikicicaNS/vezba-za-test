@@ -124,12 +124,34 @@ section{
             }
         }
         tbody{
-            tr {border-bottom: 1px solid $main_text_color;
-            td:first-child{
+            tr {
+                border-bottom: 1px solid $main_text_color;
+                td:first-child{
                 background-color: $grey_background;
                 font-weight: bold;
+                }
             }
         }
     }
+}
+
+footer{
+    background-color: black;
+    @include clearfix;
+    .logo{
+        clear: both; //kad dodamo dva elementa koji floatuju icice preko njega, zato stavljamo clearboth
+        border-bottom:1px solid $red_dark;
+    }
+
+    address, .map{
+        margin: 1em;
+    }
+
+    address {
+        float: left;
+    }
+
+    .map{
+        float: right;
     }
 }
